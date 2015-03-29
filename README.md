@@ -23,15 +23,16 @@ DGVim uses [Vundle] as a plugin manager. Vundle will install the rest of the plu
 
 ####3. Install Plugins
 
-Now that the .vimrc and Vundle have been downloaded, use Vundle to install the rest of the plugins.
+Now that the .vimrc and Vundle have been downloaded, use Vundle to install the rest of the plugins. In Vim,
 
-In Vim, `:PluginInstall`
+    :PluginInstall
 
 The default plugins are:
-- [Solarized] colorscheme - provides a precision color scheme for vim
-- [vim-airline] - provides a light status line / tabline
+- [fugitive.vim] - provides a Git wrapper for Vim
 - [matchit.zip] - provides extended % matching for HTML, LaTeX, and many other languages
 - [NERD Tree] - provides a tree structure visualisation of files and directories
+- [Solarized] colorscheme - provides a precision color scheme for vim
+- [vim-airline] - provides a light status line / tabline
 
 The included plugins can be easily changed by editing the .vimrc.
 
@@ -41,7 +42,8 @@ The included plugins can be easily changed by editing the .vimrc.
 [DGVim]:https://github.com/dgund/DGVim
 [Git]:http://git-scm.com
 [Vundle]:https://github.com/gmarik/Vundle.vim
-[Solarized]:http://ethanschoonover.com/solarized
-[vim-airline]:https://github.com/bling/vim-airline
+[fugitive.vim]:https://github.com/tpope/vim-fugitive
 [matchit.zip]:https://github.com/vim-scripts/matchit.zip
 [NERD Tree]:https://github.com/scrooloose/nerdtree
+[Solarized]:http://ethanschoonover.com/solarized
+[vim-airline]:https://github.com/bling/vim-airline
