@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                                              "
 "                                  ____   ______     ___                       "
-"     DGVim: a vimrc              |  _ \ / ___\ \   / (_)_ __ ___              "
+"     DGVim: a .vimrc             |  _ \ / ___\ \   / (_)_ __ ___              "
 "                                 | | | | |  _ \ \ / /| | '_ ' _ \             "
 "     © 2015 Devin Gund           | |_| | |_| | \ V / | | | | | | |            "
 "     dgund.com                   |____/ \____|  \_/  |_|_| |_| |_|            "
@@ -45,22 +45,26 @@ call vundle#begin()
 " Configure Vundle to manage itself
 Plugin 'gmarik/Vundle.vim'
 
+" Configure fugitive.vim
+" Provides a Git wrapper for Vim
+Plugin 'tpope/vim-fugitive'
+
+" Configure matchit.zip
+" Provides extended % matching for HTML, LaTeX, and many other languages
+Plugin 'vim-scripts/matchit.zip'
+
+" Configure NERD Tree
+" Provides a tree structure visualisation of files and directories
+Plugin 'scrooloose/nerdtree'
+
 " Configure Solarized
-" Provides a precision color scheme for vim
+" Provides a precision color scheme for Vim
 Plugin 'altercation/vim-colors-solarized'
 
 " Configure vim-airline
 " Provides a light status line / tabline
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
-
-" Configure matchit.zip
-" Provides extended % matching for HTML, LaTeX, and many other languages
-Plugin 'vim-scripts/matchit.zip'
-
-" Congigure NERD Tree
-" Provides a tree structure visualisation of files and directories
-Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
@@ -72,10 +76,10 @@ filetype plugin indent on
 " Set utf-8 as standard encoding
 set encoding=utf8
 
-" Use Unix as the standard file type
+" Use unix as the standard file type
 set ffs=unix,mac,dos
 
-" Set how maximum lines of history stored
+" Set maximum lines of history stored
 set history=500
 
 " Enable filetype plugins
@@ -87,7 +91,7 @@ set nobackup
 set nowb
 set noswapfile
 
-" Set to auto read when a file is changed externally
+" Set to read when a file is changed externally
 set autoread
 
 
@@ -259,12 +263,12 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
 
-" Let 'tl' toggle between this and the last accessed tab
+" Let <leader>tl toggle between this and the last accessed tab
 let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-" Opens a new tab with the current buffer's path
+" Opens a new tab with the current buffer path
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
@@ -283,14 +287,14 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-" Remember info about open buffers on close
+" Remember information about open buffers on close
 set viminfo^=%
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " (8) Custom Mappings and Functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
+" Remap Vim 0 to first non-blank character
 map 0 ^
 
 " :w! uses fast saving
@@ -299,7 +303,7 @@ nmap <leader>w :w!<cr>
 " :W (capital w) sudo saves the file
 command W w !sudo tee % > /dev/null
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on Mac OS
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
@@ -323,7 +327,7 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 " Turn off search result highlighting
 nnoremap <leader><space> :nohlsearch<CR>
 
-" Pressing <leader>ss will toggle and untoggle spell checking
+" <leader>ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
 " Spell check shortcuts using <leader>
