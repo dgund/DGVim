@@ -1,10 +1,10 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                                              "
 "                                  ____   ______     ___                       "
-"     DGVim: a .vimrc             |  _ \ / ___\ \   / (_)_ __ ___              "
+"    DGVim: a .vimrc              |  _ \ / ___\ \   / (_)_ __ ___              "
 "                                 | | | | |  _ \ \ / /| | '_ ' _ \             "
-"     © 2015 Devin Gund           | |_| | |_| | \ V / | | | | | | |            "
-"     dgund.com                   |____/ \____|  \_/  |_|_| |_| |_|            "
+"    © 2015 - 2016 Devin Gund     | |_| | |_| | \ V / | | | | | | |            "
+"    dgund.com                    |____/ \____|  \_/  |_|_| |_| |_|            "
 "                                                                              "
 "                                                                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,8 +141,7 @@ filetype indent on
 
 " Set indentation for certain filetypes
 autocmd Filetype make setlocal noexpandtab
-autocmd BufNewFile,BufRead *.c0 set shiftwidth=2 tabstop=2 softtabstop=2
-autocmd BufNewFile,BufRead *.c1 set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd BufNewFile,BufRead *.c set shiftwidth=4 tabstop=4 softtabstop=4
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -182,6 +181,9 @@ set hid
 " Configure backspace
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
+" Automatically use system clipboard
+set clipboard=unnamed
 
 " Enable mouse in supporting terminal emulators
 if has("mouse")
