@@ -33,6 +33,7 @@ The default plugins are:
 - [NERD Tree] - provides a tree structure visualisation of files and directories
 - [Solarized] colorscheme - provides a precision color scheme for vim
 - [vim-airline] - provides a light status line / tabline
+- [vim-airline-themes] - provides customizable themes for vim-airline
 
 The included plugins can be easily changed by editing the .vimrc.
 
@@ -47,3 +48,4 @@ The included plugins can be easily changed by editing the .vimrc.
 [NERD Tree]:https://github.com/scrooloose/nerdtree
 [Solarized]:http://ethanschoonover.com/solarized
 [vim-airline]:https://github.com/bling/vim-airline
+[vim-airline-themes]:https://github.com/vim-airline/vim-airline-themes
