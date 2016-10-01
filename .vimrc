@@ -66,6 +66,11 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 
+" Configure vim-airline-themes
+" Provides customizable themes for vim-airline
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='solarized'
+
 call vundle#end()
 filetype plugin indent on
 
