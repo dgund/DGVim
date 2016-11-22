@@ -113,10 +113,6 @@ set background=dark
 " Requires associated colorscheme files if necessary
 colorscheme solarized
 
-" Set syntax highlighting for certain filetypes
-autocmd BufNewFile,BufRead *.c0 setf c
-autocmd BufNewFile,BufRead *.c1 setf c
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " (4) Whitespace
@@ -132,9 +128,8 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-" Set linebreak after textwidth
+" Set line breaks
 set linebreak
-set textwidth=500
 
 " Indentation and wrapping
 set autoindent
