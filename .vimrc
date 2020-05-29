@@ -182,6 +182,9 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Fix option+right skip for macOS terminal
+map <Esc>f w
+
 " Automatically use system clipboard
 set clipboard=unnamed
 
